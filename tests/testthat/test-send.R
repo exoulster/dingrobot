@@ -1,3 +1,15 @@
+test_that('test send_text', {
+  res = send_text(content='test2345', atMobiles = 18616899665)
+  expect_equal(httr::status_code(res), 200)
+  expect_equal(httr::content(res)[['errcode']], 0)
+})
+
+test_that('test send_markdown', {
+  res = send_markdown(title='杭州天气', text='#### 杭州天气 @156xxxx8827\n', atMobiles = 18616899665)
+  expect_equal(httr::status_code(res), 200)
+  expect_equal(httr::content(res)[['errcode']], 0)
+})
+
 test_that('test send_actioncard_multi', {
   res = send_actioncard_multi(
     title='乔布斯 20 年前想打造一间苹果咖啡厅，而它正是 Apple Store 的前身',
@@ -16,6 +28,7 @@ test_that('test send_actioncard_multi', {
     )
   )
   expect_equal(httr::status_code(res), 200)
+  expect_equal(httr::content(res)[['errcode']], 0)
 })
 
 test_that('test send_feedcard', {
@@ -32,4 +45,5 @@ test_that('test send_feedcard', {
     )
   ))
   expect_equal(httr::status_code(res), 200)
+  expect_equal(httr::content(res)[['errcode']], 0)
 })

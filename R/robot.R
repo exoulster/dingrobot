@@ -15,7 +15,9 @@ set_dingrobot = function(url=NULL, access_token=NULL, secret=NULL) {
   } else {
     stop('Neither url or access_token is set')
   }
-  Sys.setenv(DING_SECRET=secret)
+  if (!is.null(secret)) {
+    Sys.setenv(DING_SECRET=secret)
+  }
 }
 
 

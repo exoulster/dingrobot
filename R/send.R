@@ -9,9 +9,11 @@ send_text = function(content, atMobiles=NULL, isAtAll=FALSE, prepare=FALSE) {
   url = prepare_url()
   body = rjson::toJSON(list(
     msgtype='text',
-    text=list(content=content),
+    text=list(
+      content=content
+    ),
     at=list(
-      atMobiles=atMobiles,
+      atMobiles=as.list(atMobiles),
       isAtAll=isAtAll
     )
   ))
@@ -61,7 +63,7 @@ send_markdown = function(title, text, atMobiles=NULL, isAtAll=FALSE, prepare=FAL
       text=text
     ),
     at=list(
-      atMobiles=atMobiles,
+      atMobiles=as.list(atMobiles),
       isAtAll=isAtAll
     )
   ))

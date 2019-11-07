@@ -16,5 +16,6 @@ Imports:
     rjson,
     httr,
     digest,
-    base64enc
+    base64enc,
+    argparser
 RoxygenNote: 6.1.1
