@@ -1,0 +1,20 @@
+Package: dingrobot
+Title: DingDing Robot
+Version: 0.1
+Authors@R: 
+    person(given = "Jonas",
+           family = "Gu",
+           role = c("aut", "cre"),
+           email = "exoulster@gmail.com")
+Description: API for DingDing Robot
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat (>= 2.1.0)
+Imports: 
+    rjson,
+    httr,
+    digest,
+    base64enc
+RoxygenNote: 6.1.1
