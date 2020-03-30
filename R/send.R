@@ -1,4 +1,6 @@
 #' Send plain text
+#' @details
+#' refer to https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq for more detail
 #' @param content plain text
 #' @param atMobiles vector of mobile phone numbers to @
 #' @param isAtAll if TRUE, @ all users
